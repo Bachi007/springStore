@@ -37,4 +37,30 @@ public class productController {
 		service.addProduct(p1);
 	}
 	
+	//controller to update data
+	@RequestMapping(method=RequestMethod.PUT, value="/product/{id}")
+	public void updateProduct(@RequestBody product p2, @PathVariable int id) {
+		service.updateProduct(p2, id);
+	}
+	
+	@RequestMapping(method=RequestMethod.DELETE, value="/product/{id}")
+	public void deleteProduct(@PathVariable int id){
+	
+		service.deleteProduct(id);
+	}
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
 }
